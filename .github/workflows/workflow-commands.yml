@@ -15,7 +15,7 @@ jobs:
         run: echo "::debug title:Debug title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
 
       - name: Setting warning message with parameters
-        run: echo "::error title:Warning title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+        run: echo "::warning title:Warning title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
 
       - name: Setting notice message with parameters
-        run: echo "::error title:Notice title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+        run: echo "::notice title:Notice title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
