@@ -18,7 +18,7 @@ jobs:
           echo $GITHUB_WORKSPACE
 
       - name: change wd
-        working-directory: /home/runner
+        working-directory: /home/runner/work
         run: |
           pwd
           ls -a
