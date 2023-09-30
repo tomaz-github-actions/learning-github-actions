@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: List files before
         run: ls -a
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: List Files After
         run: ls -a
