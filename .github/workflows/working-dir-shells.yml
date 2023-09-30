@@ -34,8 +34,8 @@ jobs:
           Get-Location
           dir
           echo $env:GITHUB_SSH
-          echo $env:$GITHUB_REPOSITORY
-          echo $env:$GITHUB_WORKSPACE
+          echo $env:GITHUB_REPOSITORY
+          echo $env:GITHUB_WORKSPACE
 
       - name: Python shell
         shell: python
