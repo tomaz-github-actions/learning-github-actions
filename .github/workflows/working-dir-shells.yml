@@ -18,7 +18,7 @@ jobs:
           echo $GITHUB_WORKSPACE
 
       - name: change wd
-        working-directory: /root
+        working-directory: /new
         run: pwd
 
   display-wd-info-windows:
