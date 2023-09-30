@@ -18,8 +18,10 @@ jobs:
           echo $GITHUB_WORKSPACE
 
       - name: change wd
-        working-directory: /new
-        run: pwd
+        working-directory: /home/runner
+        run: |
+          pwd
+          ls -a
 
   display-wd-info-windows:
     runs-on: windows-latest
