@@ -23,4 +23,4 @@ jobs:
       - name: echo a string windows
         run: Write-Output "Windows String"
       - name: error Step
-        run: TROLL2
+        run: TROLL3
