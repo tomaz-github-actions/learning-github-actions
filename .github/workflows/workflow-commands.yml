@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "::group::My group"
           echo "Inside group"
-          echo: "::ebdgroup::"
+          echo "::ebdgroup::"
 
       - name: Mask value
         run: echo "::add-mask::Secret String"
