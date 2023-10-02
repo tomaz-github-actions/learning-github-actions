@@ -1,0 +1,11 @@
+name: Workflow run when another workflow finished
+on:
+  workflow_run:
+    workflows: [Repository Events]
+    types: [completed]
+
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I was triggered because Repository Events was completed"
