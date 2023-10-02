@@ -2,8 +2,25 @@ name: Repository Events
 
 on:
   push:
+    branches:
+      - main
+      - "feature/*" # will match feature/something
+      - "feature/**" # will match feature/something/something
+      - "!feature/featA"
+    tags:
+      - v1.* # will match v1.1 v1.1.2
+      - "!v1.1.1"
+    paths:
+      - "**.js"
+      - "!app.js"
+
   pull_request:
     types: [opened, assigned, reopened, synchronize]
+    branches:
+      - main
+    paths:
+      - "**.js" # will only run on main and only if js files have been changed
+
   issues:
     types: [opened]
 
