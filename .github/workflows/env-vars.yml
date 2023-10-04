@@ -31,7 +31,7 @@ jobs:
           echo ""
           echo "HERE is a joke 1"
           echo "HERE is a joke 2"
-          echo "DELIMITER" >> "$GITHUB_ENV"
+          echo "$DELIMITER" >> "$GITHUB_ENV"
       - name: Log Custom ENV vars
         env:
           STEP_LEVEL_ENV: Avalible only to this step in the job
