@@ -19,6 +19,10 @@ jobs:
         # it will be sent to the runner machine already evaluated
       - name: Log Contet
         run: echo '${{ github.ref }}'
+      - name: Set Env VAR
+        run: |
+          echo "NEW_ENV_VAR=$(date)" >> "GITHUB_ENV"
+          echo "JOB_LEVEL_ENV=$RANDOM" >> "GITHUB_ENV"
       - name: Log Custom ENV vars
         env:
           STEP_LEVEL_ENV: Avalible only to this step in the job
@@ -28,3 +32,4 @@ jobs:
           echo $STEP_LEVEL_ENV
           echo $WF_LEVEL_ENV
           echo $JOB_LEVEL_ENV
+          echo $NEW_ENV_VAR
