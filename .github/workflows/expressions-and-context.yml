@@ -8,8 +8,8 @@ jobs:
     if: contains(fromJson('["issues", "pill_request"]'), github.event_name)
     steps:
       - name: Run only if issue has bug label
-        if: contains(github.event.issues.labels.*.name, 'bug')
-        run: echo ${{ join(github.event.issues.labels.*.name, ',' ) }}
+        if: contains(github.event.issue.labels.*.name, 'bug')
+        run: echo ${{ join(github.event.issue.labels.*.name, ',' ) }}
   using-expressions-and-context:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
