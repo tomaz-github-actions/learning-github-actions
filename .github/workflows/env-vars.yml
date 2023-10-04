@@ -23,6 +23,15 @@ jobs:
         run: |
           echo "NEW_ENV_VAR=$(date)" >> "$GITHUB_ENV"
           echo "JOB_LEVEL_ENV=$RANDOM" >> "$GITHUB_ENV"
+      - name: Multiline ENV Variables
+        run: |
+          DELIMITER=1234
+          echo "RANDOM_JOKE<<$DELIMITER" >> "$GITHUB_ENV"
+          echo "HERE is a joke 0"
+          echo ""
+          echo "HERE is a joke 1"
+          echo "HERE is a joke 2"
+          echo "DELIMITER" >> "$GITHUB_ENV"
       - name: Log Custom ENV vars
         env:
           STEP_LEVEL_ENV: Avalible only to this step in the job
@@ -33,3 +42,4 @@ jobs:
           echo $WF_LEVEL_ENV
           echo $JOB_LEVEL_ENV
           echo $NEW_ENV_VAR
+          echo $RANDOM_JOKE
