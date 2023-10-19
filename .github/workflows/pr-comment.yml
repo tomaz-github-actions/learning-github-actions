@@ -6,10 +6,13 @@ on:
 jobs:
   pr-comment:
     runs-on: ubuntu-latest
+    permissions:
+      issues: read
     steps:
       - name: Comment on New PR's
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.addAssignees({
               owner: context.repo.owner,
